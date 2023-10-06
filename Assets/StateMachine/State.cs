@@ -4,15 +4,11 @@ using UnityEngine;
 
 [System.Serializable]
 
-public class State<TCreature> : ScriptableObject where TCreature : Creature
+public class State : MonoBehaviour
 {
-    public State()
+    public virtual void Execute(Creature creature)
     {
 
     }
 
-    public virtual void Execute(TCreature creature)
-    {
-
-    }
 }
