@@ -407,8 +407,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9065e6cc6b97ba94e952aa2b1a55141e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 0
   maxHp: 0
+  hunger: 0
   maxHuger: 0
+  thirst: 0
   maxThirst: 0
 --- !u!4 &705737823
 Transform:
@@ -518,9 +521,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa5b4589b40a2d4a95a69f390ad5854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 0
-  maxHuger: 0
-  maxThirst: 0
+  hp: 0
+  maxHp: 100
+  hunger: 0
+  maxHuger: 100
+  thirst: 0
+  maxThirst: 100
+  miningWeight: 45
+  foragingWeight: 1
+  healingWeight: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

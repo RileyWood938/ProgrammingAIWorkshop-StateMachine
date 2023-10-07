@@ -11,7 +11,7 @@ public class MiningForGold : State
         {
             Miner m = (Miner)creature;
             m.ChangeGold(5);
-            Debug.Log("Mining for gold");
+            //Debug.Log("Mining for gold");
         }
         else
         {
