@@ -19,23 +19,28 @@ public class Miner : Creature
     [SerializeField]
     private float healingWeight;
 
-    private Dictionary<System.Type, float> desires; //using a sortedDictionary here because unity does not support priorityQueue
-
     protected override Dictionary<System.Type, Func<float>> setUpPossibleStates()
     {
         Debug.Log("setting up states in Miner");
 
         Dictionary<System.Type, Func<float>> dict = base.setUpPossibleStates();
+
+        // Add possible states for this creature here along with their evaluator functions
+        // make sure that the evaluators are declared in this creature as well
+        // an evaluator should be a function with no input that returns a float
+
         dict.Add(typeof(MiningForGold), evaluateMining);
         dict.Add(typeof(Forage), evaluateForaging);
         dict.Add(typeof(Healing), evaluateHealing);
+
+        // 
+
         return dict;
     }
 
     protected override void Start()
     {
         base.Start();
-        desires = new Dictionary<System.Type, float>();
         this.state = gameObject.AddComponent<MiningForGold>();
     }
 

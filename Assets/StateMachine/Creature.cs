@@ -28,6 +28,10 @@ public class Creature : MonoBehaviour
     {
         Dictionary<System.Type, Func<float>> dict = new Dictionary<System.Type, Func<float>>();
 
+        // Add possible states for this creature here along with their evaluator functions
+        // make sure that the evaluators are declared in this creature as well
+        // an evaluator should be a function with no input that returns a float
+
         Debug.Log("setting up states in creature");
         dict.Add(typeof(State), evaluateState);
 
